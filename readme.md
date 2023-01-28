@@ -10,16 +10,18 @@ Clone the repo and name it as you like. You're set.
 
 There are at least threee ways to do that:
 
-- If you have something like XAMPP installed, drop the folder in the corresponding root. You know the dril.
+- If you have something like XAMPP installed, drop the folder in the corresponding root. It's 100% vanilla html/css/js
 
-- From inside the folder go:
+- On Linux or Windows WSL terminal, inside the folder go:
 
 ```bash
-	python -m SimpleHTTPSertver 8000
+python -m SimpleHTTPSertver 8000
 
 ```
 And open http://localhost:8000 
 You eventually need to Ctr+F5 to refresh the page. [Stack](https://stackoverflow.com/questions/12193803/invoke-python-simplehttpserver-from-command-line-with-no-cache-option)
+
+There are other options around Python, this one works for me at the moment, I'll check the other ones for reference.
 
 - Launch index.html with the VSCode's LiveServer extension.
 
@@ -28,9 +30,9 @@ You eventually need to Ctr+F5 to refresh the page. [Stack](https://stackoverflow
 
 Any mypage.md inside the md/ folder, will be available as webpage at http://localhost:8000/?page=mypage 
 
-Point a link to that page with [MyPage](./?page=mypage) from within another .md inside md/
+Point a link to that page with `[MyPage](./?page=mypage)` from within another .md file inside md/ folder.
 
-It's just a wraper around the [<zero-md>](https://zerodevx.github.io/zero-md/basic-usage) parser, and serving it by any available mean.
+It's just a wraper around the [zero-md](https://zerodevx.github.io/zero-md/basic-usage) parser, and serving it by any available mean.
 
 
 ## Later
