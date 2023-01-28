@@ -10,7 +10,12 @@ Clone the repo and name it as you like. You're set.
 
 There are at least threee ways to do that:
 
-- If you have something like XAMPP installed, drop the folder in the corresponding root. It's 100% vanilla html/css/js
+- If you have something like XAMPP installed, clone the repo in the corresponding root, like XAMPP/htdocs. 
+
+```bash
+git clone git@github.com:AndiKod/sherpa-notes.git 
+```
+It's 100% vanilla html/css/js, so 'it works' out-of-da-box.
 
 - On Linux or Windows WSL terminal, inside the folder go:
 
@@ -22,6 +27,8 @@ And open http://localhost:8000
 You eventually need to Ctr+F5 to refresh the page. [Stack](https://stackoverflow.com/questions/12193803/invoke-python-simplehttpserver-from-command-line-with-no-cache-option)
 
 There are other options around Python, this one works for me at the moment, I'll check the other ones for reference.
+
+Or still XAMPP, it works there too.
 
 - Launch index.html with the VSCode's LiveServer extension.
 
