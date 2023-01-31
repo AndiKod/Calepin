@@ -51,7 +51,7 @@ There are other options around Python, this one works for me at the moment, I'll
 
 Any mypage.md inside the md/ folder, will be available as webpage at url/?page=mypage The 'url' part will be different according to the choosen method. 
 
-Point a link to that page with `[MyPage](./?page=mypage)` from within another .md file inside md/ folder.
+Point a link to that page with `[MyPage](../?page=mypage)` from within another .md file inside md/ folder.
 
 It's just a wraper around the [zero-md](https://zerodevx.github.io/zero-md/basic-usage) parser, and serving it by any available mean.
 

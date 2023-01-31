@@ -7,7 +7,7 @@ const src = "./md/"+urlparts[1]+".md";
 document.getElementById("md").setAttribute("src", src) 
 
 // Dynamic Title for the pages config
-const title = urlparts[1]+" | sh:erpa"
+const title = urlparts[1]+" | Calepin"
 // Set the page Title
 document.title = title;
 
