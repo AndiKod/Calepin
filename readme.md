@@ -1,4 +1,4 @@
-# sh:erpa-Notes
+# Calepin
 
 Write plain Markdown and view it in your browser as styled HTML, with zero configuration. Awesome when paierd with the [sh:erpa](https://github.com/AndiKod/sherpa) CLI companion, to manage todos, bookmarks, notes, save to git, etc.
 
