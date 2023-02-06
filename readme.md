@@ -28,7 +28,7 @@ On Linux or WinWSL, can be something like...
 
 ```bash
 cd ~/Documents
-git clone git@github.com:AndiKod/sherpa-notes.git myDocs
+git clone git@github.com:AndiKod/calepin.git myDocs
 ```
 Go inside & launch the Server:
 
