@@ -27,7 +27,7 @@ It's a wraper around the [zero-md](https://zerodevx.github.io/zero-md/basic-usag
 
 There are several ways to do that:
 
-### Serve in the browser with Node http-server:
+### Serve with Node http-server:
 
 On Linux or Windows WSL, go inside & launch the Server:
 
@@ -35,9 +35,8 @@ On Linux or Windows WSL, go inside & launch the Server:
 cd ~/Documents/calepin
 npx http-server 
 ```
-It invoke [http-server](https://github.com/http-party/http-server) and spin a server. On the first call it will install it.
 
-Your Calepin website is running at http://localhost:8080
+On the first call it will install it. Your Calepin website is running at http://localhost:8080
 
 ### The good old [XAMPP](https://www.apachefriends.org/index.html) or [WAMP](https://www.wampserver.com/en/) 
 
