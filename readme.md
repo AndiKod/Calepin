@@ -4,7 +4,19 @@ Write plain Markdown and view it in your browser as styled HTML, with zero confi
 
 ## Install
 
-Clone the repo and name it as you like. You're set.
+Clone the repo. You're set.
+
+
+# Basic Usage
+
+- Any mypage.md inside the md/ folder, will be available as webpage at url/?page=mypage. The 'url' part will be different according to the choosen method. 
+
+- Point a link to that page with `[MyPage](../?page=mypage)` from within another .md file inside md/ folder. There you go, you have a local website.
+
+- Pages Titles are dynamically set, so it looks like a real website while only writing plain Markdown and no bundlers or whatever bloat.
+
+It's just a wraper around the [zero-md](https://zerodevx.github.io/zero-md/basic-usage) parser, and serving it by any available mean.
+
 
 ## View in the Browser
 
@@ -30,9 +42,14 @@ Your docs site is running at http://localhost:8080
 
 ### The good old [XAMPP](https://www.apachefriends.org/index.html) or [WAMP](https://www.wampserver.com/en/) 
 
-If you have something like that installed, clone the repo in the corresponding root, or download and drop it there. 
+If you have something like that installed, clone the repo in the specific root, or download and drop it there. 
 
-It's 100% vanilla html/css/js, so 'it works' out-of-da-box. Then just view it in your browser at http://localhost/myDocs (or whatever alse you named it)  
+It's 100% vanilla html/css/js, so 'it works' out-of-da-box. 
+
+```
+# Just open it in a browser
+waterfox http://localhost/myDocs   # or whatever else you named it 
+```
 
 ### The Python route  
 
@@ -44,20 +61,12 @@ python -m SimpleHTTPSertver 8080
 ```
 You eventually need to Ctr+F5 to refresh the page. [StackOverflow](https://stackoverflow.com/questions/12193803/invoke-python-simplehttpserver-from-command-line-with-no-cache-option). There are other options around Python (if you run v2 or v3), this one worked for me when testing.
 
-# Basic Usage
 
-- Any mypage.md inside the md/ folder, will be available as webpage at url/?page=mypage. The 'url' part will be different according to the choosen method. 
-
-- Point a link to that page with `[MyPage](../?page=mypage)` from within another .md file inside md/ folder. There you go, you have a local website.
-
-- Pages Titles are dynamically, so it will beel like a real website while only writing plain Markdown and no bundlers/compiles/whatever bloat.
-
-It's just a wraper around the [zero-md](https://zerodevx.github.io/zero-md/basic-usage) parser, and serving it by any available mean.
 
 
 ## Later
 
-Building css themes to chose from. As for now it's the default <zero-md> theme, with a light prismjs for the code highlighting. For "bigger text" you can just zoom with ctr+ or ctr- or whatever your browser gives offers.
+Building css themes to chose from. As for now it's the default <zero-md> theme, with a light prismjs for the code highlighting. For "bigger text" you can just zoom with ctr+ or ctr- or whatever your browser offers.
 
 AlpineJS is included in the index.html file, so a little interactivity for building a nav with a json object from the data/ folder ...could be nice.
 
