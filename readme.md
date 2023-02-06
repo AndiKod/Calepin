@@ -2,7 +2,6 @@
   <img width="25%" src="./img/calepin-logo.png">
 </p>
 
-# Calepin
 
 Write plain Markdown and view it in your browser as styled HTML, with zero configuration. Awesome when paierd with the [sh:erpa](https://github.com/AndiKod/sherpa) CLI Assistant, to manage todos, bookmarks, notes, save to git, etc.
 
