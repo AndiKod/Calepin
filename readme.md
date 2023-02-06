@@ -39,19 +39,18 @@ It's 100% vanilla html/css/js, so 'it works' out-of-da-box. Then just view it in
 For the record, but one of the above should be enough.
 
 ```bash
-python -m SimpleHTTPSertver 8000
+python -m SimpleHTTPSertver 8080
 
 ```
-And open http://localhost:8000 
-You eventually need to Ctr+F5 to refresh the page. [Stack](https://stackoverflow.com/questions/12193803/invoke-python-simplehttpserver-from-command-line-with-no-cache-option)
+You eventually need to Ctr+F5 to refresh the page. [StackOverflow](https://stackoverflow.com/questions/12193803/invoke-python-simplehttpserver-from-command-line-with-no-cache-option). There are other options around Python (if you run v2 or v3), this one worked for me when testing.
 
-There are other options around Python, this one works for me at the moment, I'll check the other ones for reference. The link in index.html should be adapted to :8000 instead of :8080  
+# Basic Usage
 
-## Basic usage
+- Any mypage.md inside the md/ folder, will be available as webpage at url/?page=mypage. The 'url' part will be different according to the choosen method. 
 
-Any mypage.md inside the md/ folder, will be available as webpage at url/?page=mypage The 'url' part will be different according to the choosen method. 
+- Point a link to that page with `[MyPage](../?page=mypage)` from within another .md file inside md/ folder. There you go, you have a local website.
 
-Point a link to that page with `[MyPage](../?page=mypage)` from within another .md file inside md/ folder.
+- Pages Titles are dynamically, so it will beel like a real website while only writing plain Markdown and no bundlers/compiles/whatever bloat.
 
 It's just a wraper around the [zero-md](https://zerodevx.github.io/zero-md/basic-usage) parser, and serving it by any available mean.
 
