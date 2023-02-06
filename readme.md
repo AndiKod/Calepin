@@ -4,7 +4,12 @@ Write plain Markdown and view it in your browser as styled HTML, with zero confi
 
 ## Install
 
-Clone the repo. You're set.
+Clone the repo somewhere. 
+```bash
+cd ~/Documents
+git clone git@github.com:AndiKod/calepin.git
+```
+You're set! 
 
 
 # Basic Usage
@@ -15,7 +20,7 @@ Clone the repo. You're set.
 
 - Pages Titles are dynamically set, so it looks like a real website while only writing plain Markdown and no bundlers or whatever bloat.
 
-It's just a wraper around the [zero-md](https://zerodevx.github.io/zero-md/basic-usage) parser, and serving it by any available mean.
+It's a wraper around the [zero-md](https://zerodevx.github.io/zero-md/basic-usage) parser, and serving it by any available mean.
 
 
 ## View in the Browser
@@ -24,21 +29,15 @@ There are several ways to do that:
 
 ### Serve in the browser with Node http-server:
 
-On Linux or WinWSL, can be something like...
+On Linux or Windows WSL, go inside & launch the Server:
 
 ```bash
-cd ~/Documents
-git clone git@github.com:AndiKod/calepin.git myDocs
-```
-Go inside & launch the Server:
-
-```bash
-cd myDocs
+cd ~/Documents/calepin
 npx http-server 
 ```
 It invoke [http-server](https://github.com/http-party/http-server) and spin a server. On the first call it will install it.
 
-Your docs site is running at http://localhost:8080
+Your Calepin website is running at http://localhost:8080
 
 ### The good old [XAMPP](https://www.apachefriends.org/index.html) or [WAMP](https://www.wampserver.com/en/) 
 
@@ -48,7 +47,7 @@ It's 100% vanilla html/css/js, so 'it works' out-of-da-box.
 
 ```
 # Just open it in a browser
-waterfox http://localhost/myDocs   # or whatever else you named it 
+firefox http://localhost/calepin
 ```
 
 ### The Python route  
