@@ -67,10 +67,10 @@ You eventually need to Ctr+F5 to refresh the page. [StackOverflow](https://stack
 
 ## Later
 
-- Building css themes to chose from, in accord with the content of you notes-book or personal taste. The default one is a dark clean theme.
+- Building css themes to chose from, in accord with the content of your notes-book or personal taste. The default one is a dark clean theme.
 
 - Experiment with CSS & AlpineJS components, to be used from within the Markdown.
 
-- Bring everything inside Calpin's assets, so it could work offline. No CDN calls, zero dependency.
+- Bring everything inside Calpin's assets, so it could work offline. No CDN calls.
 
 
