@@ -23,7 +23,8 @@ You're set!
 
 - Pages Titles are dynamically set, so it looks like a real website while only writing plain Markdown and no bundlers or whatever bloat.
 
-It's a wraper around the [zero-md](https://zerodevx.github.io/zero-md/basic-usage) parser, and serving it by any available mean.
+Moving away from `<zero-md>`, Calpin implements [Showdown](#) directly, allowing more flexibility, a more expressive md, and the greation of css/alpine components thanks to the `markdown="1"` attribute. Somehow closer to Kramdown on some aspects.
+
 
 
 ## View in the Browser
@@ -64,6 +65,7 @@ You eventually need to Ctr+F5 to refresh the page. [StackOverflow](https://stack
 
 
 
+...a ViteJS based version is under test ;)
 
 ## Later
 
