@@ -1,5 +1,5 @@
 <p align="center" width="100%">
-  <img width="25%" src="./img/calepin-logo.png">
+  <img width="25%" src="./assets/img/calepin-logo.png">
 </p>
 
 
