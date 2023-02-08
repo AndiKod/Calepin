@@ -23,7 +23,7 @@ You're set!
 
 - Pages Titles are dynamically set, so it looks like a real website while only writing plain Markdown and no bundlers or whatever bloat.
 
-Moving away from `<zero-md>`, Calpin implements [Showdown](#) directly, allowing more flexibility, a more expressive md, and the greation of css/alpine components thanks to the `markdown="1"` attribute. Somehow closer to Kramdown on some aspects.
+Moving away from `<zero-md>`, Calpin implements [ShowdownJS](https://showdownjs.com) directly for more flexibility, expressive md, and the creation of css/alpine components thanks to the `markdown="1"` attribute.
 
 
 
