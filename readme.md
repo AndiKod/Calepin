@@ -67,12 +67,10 @@ You eventually need to Ctr+F5 to refresh the page. [StackOverflow](https://stack
 
 ## Later
 
-Building css themes to chose from. As for now it's the default <zero-md> theme, with a light prismjs for the code highlighting. For "bigger text" you can just zoom with ctr+ or ctr- or whatever your browser offers.
+- Building css themes to chose from, in accord with the content of you notes-book or personal taste. The default one is a dark clean theme.
 
-AlpineJS is included in the index.html file, so a little interactivity for building a nav with a json object from the data/ folder ...could be nice.
+- Experiment with CSS & AlpineJS components, to be used from within the Markdown.
 
-Eventually testing some "components in markdown" options and see what can be done.
-
-
+- Bring everything inside Calpin's assets, so it could work offline. No CDN calls, zero dependency.
 
 

@@ -7,20 +7,25 @@
 	<!-- zerodevx.github.io -->
 	<script 
 		type="module" 
-	  src="https://cdn.jsdelivr.net/gh/zerodevx/zero-md@2/dist/zero-md.min.js"
+	  src="./assets/js/zero-md.min.js"
 	></script>	
 	<!-- alpinejs.dev  -->
-	<script src="//unpkg.com/alpinejs" defer></script>
-	<link rel="stylesheet" href="./css/style.css">
+	<link rel="stylesheet" href="./assets/css/style.css">
 </head>
 <body>
 	<header>
-		<a href="http://localhost:8080" id="logo">Calepin</a>
+		<!--<a href="https://calepin-andikod.vercel.app" id="logo">Calepin</a> -->
+			<a href="http://localhost:8080" id="logo">Calepin</a>
 	</header>
   <main id="wrap">
- 	<zero-md src="./md/Home.md" id="md"></zero-md>
+ 	<zero-md src="./md/Home.md" id="md">
+
+		<template data-merge="append">
+			    <link rel="stylesheet" href="./assets/css/style.css">
+		  </template>
+	</zero-md>
 	</main>
 	
-	<script src="./js/main.js"></script>
+	<script src="./assets/js/main.js"></script>
 </body>
 </html>
