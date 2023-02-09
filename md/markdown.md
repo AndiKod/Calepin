@@ -11,8 +11,12 @@ This page is here to check the styles. Baseball Ipsum. A text generator straight
 * Green
 * Banana
 
-```bash
-	echo "Write it in your Calepin"
+```js
+
+if(true){
+	console.log('something')
+}
+
 ```
 
 Some **bold** and *italic* text or [links](#)
