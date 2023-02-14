@@ -2,29 +2,44 @@
   <img width="25%" src="./assets/img/calepin-logo.png">
 </p>
 
+Bash & Pandoc based Static Site Generator. Can be used as a standalone tool, or as a part of the [sh:erpa](https://github.com/AndiKod/sherpa) CLI Assistant, to manage todos, bookmarks, notes, save to git, etc.
 
-Write plain Markdown and view it in your browser as styled HTML, with zero configuration. Awesome when paierd with the [sh:erpa](https://github.com/AndiKod/sherpa) CLI Assistant, to manage todos, bookmarks, notes, save to git, etc.
-
-## Install
+## Install 
 
 Clone the repo somewhere. 
 ```bash
 cd ~/Documents
 git clone git@github.com:AndiKod/calepin.git
 ```
-You're set! 
+Install [sh:erpa](https://github.com/AndiKod/sherpa) and edit the paths inside `sherpa/bin/comp`. Now you can just run `comp` to generate a full website inside /dist from the content in /src. 
 
+Add it also as a sh:erpa route, to fully integrate it.
 
 # Basic Usage
 
-- Any mypage.md inside the md/ folder, will be available as webpage at url/?page=mypage. The 'url' part will be different according to the choosen method. 
+The actual version is the starting point of something new.
 
-- Point a link to that page with `[MyPage](../?page=mypage)` from within another .md file inside md/ folder. There you go, you have a local website.
 
-- Pages Titles are dynamically set, so it looks like a real website while only writing plain Markdown and no bundlers or whatever bloat.
+It now, via Pandoc, include:
 
-Moving away from `<zero-md>`, Calpin implements [ShowdownJS](https://showdownjs.com) directly for more flexibility, expressive md, and the creation of css/alpine components thanks to the `markdown="1"` attribute.
+- frontmatter data
+- layouts
+- partial-layouts 
+- conditionals & loops in layouts
+- code highlight out of the box
+- math formulas
+- styled divs generated from markdown
+- attributes & class/id applied from within markdown
+- auto en-dash and em-dash, md to visual checkbox todo, ...
 
+Check the docs about the [Templates](https://pandoc.org/MANUAL.html#templates) and [Pandoc's Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) on pandoc.org 
+
+
+It's just a beginning, so for now `src/index.md` will compile to `dist/index.html`, and `src/somepage.md` will compile to `dist/somepage/index.html` to have clean urls like https://mysite.com and https://mysite.com/somepage.
+
+
+
+TODO: Looking into custom routes and folder-based content routing
 
 
 ## View in the Browser
@@ -62,17 +77,5 @@ python -m SimpleHTTPSertver 8080
 
 ```
 You eventually need to Ctr+F5 to refresh the page. [StackOverflow](https://stackoverflow.com/questions/12193803/invoke-python-simplehttpserver-from-command-line-with-no-cache-option). There are other options around Python (if you run v2 or v3), this one worked for me when testing.
-
-
-
-...a ViteJS based version is under test ;)
-
-## Later
-
-- Building css themes to chose from, in accord with the content of your notes-book or personal taste. The default one is a dark clean theme.
-
-- Experiment with CSS & AlpineJS components, to be used from within the Markdown.
-
-- Bring everything inside Calpin's assets, so it could work offline. No CDN calls.
 
 

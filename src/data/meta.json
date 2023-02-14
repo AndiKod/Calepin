@@ -1,0 +1,13 @@
+{
+	"foo": "bar",
+	"nav": [
+		{
+			"label": "Markdown",
+			"url": "./markdown"
+		},
+		{
+			"label": "Random",
+			"url": "./random"
+		}
+	]
+}	

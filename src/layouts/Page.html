@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="date" content='$date-meta$'> 
+	<title>$title$</title>
+	<meta name="description" content="Calepin. $desc$">
+	<link rel="stylesheet" href="../assets/css/style.css">
+	<link rel="stylesheet" href="../assets/css/highlight.css">
+	<script
+		  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+			  type="text/javascript">
+	</script>
+
+</head>
+<body>
+	<header>
+		<!--<a href="https://calepin-andikod.vercel.app" id="logo">Calepin</a> -->
+			<a href="http://localhost:8080" id="logo">Calepin</a>
+	</header>
+	
+
+  <nav>
+		${for(nav)} 
+			<a href="${nav.url}">${nav.label}</a>${sep} -  
+		${endfor}
+	</nav>
+
+  <main id="wrap">
+  	$body$
+	</main>
+</body>
+</html>
