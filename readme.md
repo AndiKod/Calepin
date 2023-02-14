@@ -13,7 +13,7 @@ Clone the repo somewhere.
 cd ~/Documents
 git clone git@github.com:AndiKod/calepin.git
 ```
-Install [sh:erpa](https://github.com/AndiKod/sherpa) and edit the paths inside `sherpa/bin/comp`. Now you can just run `comp` to generate a full website inside /dist from the content in /src. 
+Install [sh:erpa](https://github.com/AndiKod/sherpa) and edit the paths inside `sherpa/bin/comp`. Now you can just run `comp` to generate a full website inside /dist from the content in /src. From inside Vim, just use `:!comp` and keep editing.
 
 Add it also as a sh:erpa route, to fully integrate it.
 
