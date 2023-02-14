@@ -1,8 +1,10 @@
 <p align="center" width="100%">
-  <img width="25%" src="./assets/img/calepin-logo.png">
+  <img width="25%" src="./src/assets/img/calepin-logo.png">
 </p>
 
-Bash & Pandoc based Static Site Generator. Can be used as a standalone tool, or as a part of the [sh:erpa](https://github.com/AndiKod/sherpa) CLI Assistant, to manage todos, bookmarks, notes, save to git, etc.
+Bash & Pandoc based Static Site Generator. 
+
+To be used with [sh:erpa](https://github.com/AndiKod/sherpa) CLI Assistant, along with notes management, todos, bookmarks, web search from the console, etc.
 
 ## Install 
 
