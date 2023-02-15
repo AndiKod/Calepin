@@ -1,0 +1,15 @@
+#! /bin/bash
+#
+# --- Utility for Calepin ---- #
+# It generate a static website #
+#+from the .md and layouts.    #
+# At it core, stands Pandoc.   #
+
+root="/home/andrei/code/calepin"
+dist=$root/dist  
+
+# --- Deploy  to Vercel --- #
+cd $root/dist
+vercel --prod
+
+
