@@ -40,6 +40,18 @@ Check the docs about the [Templates](https://pandoc.org/MANUAL.html#templates) a
 It's just a beginning, so for now `src/index.md` will compile to `dist/index.html`, and `src/somepage.md` will compile to `dist/somepage/index.html` to have clean urls like https://mysite.com and https://mysite.com/somepage.
 
 
+## Compile, save to Git & Deploy to Vercel
+
+As of now, we can edit `sherpa/bin/comp`, `sherpa/bin/deploy`, and assuming Calepin have a remote git and is the active sh:erpa route:
+
+- `comp` to Compile layouts, assets & md to /dist 
+- `s sync` or `s toGit "message txt"` to save/push
+- `deploy` to run `vercel --prod` from dist  
+
+All commands can be used from inside Vim, preceded by `:!`
+
+
+*PS: vercel must be runned once prior to that, from the /dist folder to setup the link before just edit `bin/deploy` and fire `deploy` to go live.*
 
 TODO: Looking into custom routes and folder-based content routing
 
