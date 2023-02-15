@@ -76,7 +76,7 @@ TODO: Looking into custom routes and folder-based content routing
 On Linux or Windows WSL, go inside & launch the Server:
 
 ```bash
-cd ~/Documents/calepin
+cd ~/Documents/calepin/dist
 npx http-server 
 ```
 
@@ -90,7 +90,7 @@ As an alternative, If you have something like that still installed, clone the re
 
 ```
 # Just open it in a browser
-firefox http://localhost/calepin
+firefox http://localhost/calepin/dist
 ```
 
 ### The Python route  
