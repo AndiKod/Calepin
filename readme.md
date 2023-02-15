@@ -13,20 +13,29 @@ Clone the repo somewhere.
 cd ~/Documents
 git clone git@github.com:AndiKod/calepin.git
 ```
-Add that folder to the path by adding that line to *~/.bashrc* : 
+Add /bin to the path by adding that line to *~/.bashrc* : 
 
 ```bash
 export PATH=$PATH:$HOME/Documents/calepin/bin
 ```
 Restart your terminal or enter the `source ~/.bashrc` command. Edit the paths inside bin/comp and bin/deploy to match your calepin folder.
 
-**Congtratz!** Now you can just run `comp` to generate a full website inside /dist from the content in /src. From inside Vim, just use `:!comp` and keep editing.
+### Grab a recent Pandoc version
+
+```bash
+wget https://github.com/jgm/pandoc/releases/download/2.9.2.1/pandoc-2.9.2.1-1-amd64.deb
+sudo dpkg -i pandoc-2.9.2.1-1-amd64.deb
+```
+
+When installing from your distro library, it sometimes install old versions. Check that [stackoverflow](https://stackoverflow.com/questions/61100045/how-to-install-stable-and-fresh-pandoc-on-ubuntu) post about that point.
 
 - Add it's path also as a [sh:erpa](https://github.com/AndiKod/sherpa) route, to fully integrate it and get to all the productivity and quality-of-life tools. 
 
 # Basic Usage
 
-Via just Pandoc, Calepin include:
+Run `comp` to compile/generate a website inside /dist from the content in /src. From inside Vim, just use `:!comp` and keep editing.
+
+Via Pandoc, Calepin include:
 
 - frontmatter data
 - layouts
@@ -40,23 +49,12 @@ Via just Pandoc, Calepin include:
 
 Check the docs about the [Templates](https://pandoc.org/MANUAL.html#templates) and [Pandoc's Markdown](https://pandoc.org/MANUAL.html#pandocs-markdown) on pandoc.org, and obviously get the latest version.
 
-```bash
-wget https://github.com/jgm/pandoc/releases/download/2.9.2.1/pandoc-2.9.2.1-1-amd64.deb
-sudo dpkg -i pandoc-2.9.2.1-1-amd64.deb
-```
-
-When installing from your distro library, it sometimes install old versions. Check that [stackoverflow](https://stackoverflow.com/questions/61100045/how-to-install-stable-and-fresh-pandoc-on-ubuntu) post about that point.
+For now `src/index.md` will compile to `dist/index.html`, and `src/somepage.md` will compile to `dist/somepage/index.html` to have clean urls like https://mysite.com and https://mysite.com/somepage.
 
 
-> It's just a beginning, so for now `src/index.md` will compile to `dist/index.html`, and `src/somepage.md` will compile to `dist/somepage/index.html` to have clean urls like https://mysite.com and https://mysite.com/somepage.
+## Deploy to Vercel
 
-
-## Compile & Deploy to Vercel
-
-- `comp` to Compile layouts, assets & md to /dist 
 - `deploy` to run `vercel --prod` from dist  
-
-All commands can be used from inside Vim, preceded by `:!`
 
 *PS: vercel must be runned once prior to that, from the /dist folder to setup the link before just edit `bin/deploy` and fire `deploy` to go live whenever needed.*
 
@@ -65,6 +63,9 @@ All commands can be used from inside Vim, preceded by `:!`
 - `s sync` or `s toGit "message txt"` to save/push
 - `s fromGit` to pull the most recent version  
 - `s --help` for docs and commands lists
+
+
+All commands can be used from inside Vim, preceded by `:!`
 
 
 TODO: Looking into custom routes and folder-based content routing
