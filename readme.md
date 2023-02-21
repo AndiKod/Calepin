@@ -33,7 +33,7 @@ When installing from your distro library, it sometimes install old versions. Che
 
 # Basic Usage
 
-## Compile with Pandoc via `bin/comp`
+## Compile with Pandoc via `comp`
 
 Run `comp` to compile/generate a website inside /dist from the content in /src. From inside Vim, just use `:!comp` and keep editing.
 
@@ -53,7 +53,7 @@ Check the docs about the [Templates](https://pandoc.org/MANUAL.html#templates) a
 
 For now `src/index.md` will compile to `dist/index.html`, and `src/somepage.md` will compile to `dist/somepage/index.html` to have clean urls like https://mysite.com and https://mysite.com/somepage.
 
-## Watch for changes with entr(1) via `bin/watch`
+## Watch for changes with entr(1) via `watch`
 
 The `bin/watch` script will run `comp` on .md and .html change/save, using [entr](eradman.com/entrproject). The utility is available on package managers, like here for [Debien/Ubuntu](https://installati.one/debian/11/entr) based distros and WSL Ubuntu.
 
