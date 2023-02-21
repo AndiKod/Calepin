@@ -1,10 +1,10 @@
 ---
-title: Markdown test
+title: Markdown Test
 desc: Happy markdown
 date: February 12, 2023  
 ---
 
-# Markdown
+# Pandoc Markdown
 
 This page is here to check the styles. Baseball Ipsum. A text generator straight out of left field, step up to bat on your next project with this baseball themed lorem ipsum text.
 

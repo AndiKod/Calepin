@@ -13,6 +13,13 @@ content=$root/src/pages
 data=$root/src/data
 dist=$root/dist  
 
+
+
+# --- Clean --- #
+
+rm -rf $dist/assets  
+  
+
 # --- Compile --- #
 
 for file in $content/*
@@ -35,4 +42,9 @@ do
 	fi  
 
 done	
- 
+
+# --- Pass trough --- # 
+echo "Copy Assets"
+cp -r $root/src/assets $root/dist
+echo "Done!"
+

@@ -34,7 +34,15 @@ a, a:visited {
 	color: #0d929b;
 }
 
-pre {
-	padding: .5rem;
-	border-radius: 4px;
+.hero {
+	padding: 1.5rem;
+	text-align: center;
+}
+
+.hero figure img {
+	width: 150px;
+}
+
+.hero figcaption {
+	display: none;
 }

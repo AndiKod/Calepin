@@ -33,3 +33,16 @@ p, h1, h2 {
 a, a:visited {
 	color: #0d929b;
 }
+
+.hero {
+	padding: 1.5rem;
+	text-align: center;
+}
+
+.hero figure img {
+	width: 150px;
+}
+
+.hero figcaption {
+	display: none;
+}

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+# Uning entr(1) to compile
+#+if any .md or .html change.
+
+**/*.md **/*.html | entr comp
+
+# TODO: Add css/js watchers
