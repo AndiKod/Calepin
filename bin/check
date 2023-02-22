@@ -3,6 +3,9 @@
 # Checking programs versions
 #+for Calepin's tools.
 
+# Not really necessary, but I'll see 
+#+if any use can be useful. 
+
 # Pandoc
 if [[ $(pandoc --version | grep "command not found") ]]
 then

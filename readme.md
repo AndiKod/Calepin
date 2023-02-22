@@ -16,14 +16,14 @@ git clone https://github.com/AndiKod/calepin.git
 Make sure pandoc , sass, purgeCSS & entr are installed. On something like Ubuntu 22 (full or inside WSL), Debien, & those based upon them you can just go:
 
 ```bash
-npm i -g css purgeCSS
+npm i -g sass purgecss 
 sudo apt-get install pandoc
 sudo apt-get install entr 
 ```
 
 *If you are rolling something like Gentoo or Arch, I bet you know how to get those packages.*
 
-- Edit the path to your root folder inside `bin/watch` and `bin/build`. That's all. For next times, clonning the Calepin and edit the path will be enough.
+- Edit the path to your root folder inside `bin/compil` and `bin/build`. That's all. For next times, clonning the Calepin and edit the path will be enough.
 
 ## Basic Usage
 
@@ -73,7 +73,7 @@ For now `src/index.md` will compile to `dist/index.html`, and `src/somepage.md` 
 
 
 
-TODO: Looking into custom routes and folder-based content routing
+TODO: Looking into 'content collections' like posts or whatever.
 
 
 ---
