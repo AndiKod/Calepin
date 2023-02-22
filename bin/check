@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# Checking programs versions
+#+for Calepin's tools.
+
+# Pandoc
+if [[ $(pandoc --version | grep "command not found") ]]
+then
+	# --- Install --- #
+else
+ pandocV="pandoc --version  | \
+         grep -w '^pandoc' | \
+				 awk '{print $2}')"
+
+ echo "Pandoc: $pandocV"				 
+fi							 
+
+
+
+# SASS
+echo "SASS $(sass --version     | \
+             grep -w 'compiled' | \
+					   awk '{print $1}')"
+
+
+
+# entr
+echo "entr $(entr              | \
+             grep '^release'   | \
+					   awk '{print $2}')"
+
+							
+# PurgeCSS
+echo "PurgeCSS $(purgecss --version)"
+
+
+# Vercel
+echo "$(vercel --version     | \
+              grep -w 'CLI'          | \
+							awk '{print $2}')"

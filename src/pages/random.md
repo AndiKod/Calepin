@@ -12,8 +12,4 @@ Random notes, liks or todos. It's better having a dedicated topic book (yeah, ju
 
 Ceci---ou---celà!
 
-Hey U.
 
-## It's alive?
-
-Looks like. Cool

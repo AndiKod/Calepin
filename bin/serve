@@ -1,0 +1,8 @@
+#! /bin/bash
+
+# --- Launching a local server --- #
+
+dist="/home/andrei/code/calepin/dist"  
+
+cd $dist 
+npx http-server  

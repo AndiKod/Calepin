@@ -43,6 +43,17 @@ do
 
 done	
 
+# --- Compile SASS to Compressed --- #
+
+echo "Compiling SASS for production"
+sass --style=compressed $root/src/assets/css/input.scss $root/src/assets/css/style.min.css 
+
+# --- PurgeCSS --- #
+
+echo "Removing unused styles"
+purgecss --css $root/src/assets/css/style.min.css --content $dist/**/*.html $dist/**/*.js -o $dist/style.css
+
+
 # --- Pass trough --- # 
 echo "Copy Assets"
 cp -r $root/src/assets $root/dist

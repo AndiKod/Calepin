@@ -2,42 +2,52 @@
   <img width="25%" src="./src/assets/img/calepin-logo.png">
 </p>
 
-Bash & Pandoc based Static Site Generator. 
+Shell & Pandoc simple Static Site Generator. 
 
-To be used alone, or with [sh:erpa](https://github.com/AndiKod/sherpa) CLI Assistant, along with notes management, todos, bookmarks, web search from the console, etc.
+Can be used alone, but Awesome with [sh:erpa](https://github.com/AndiKod/sherpa) CLI Assistant, along with notes management, todos, bookmarks, web search from the console, etc.
 
 ## Install 
 
-Clone the repo somewhere. 
-```bash
-cd ~/Documents
-git clone git@github.com:AndiKod/calepin.git
-```
-Add /bin to the path by adding that line to *~/.bashrc* : 
+Clone the repo somewhere 
 
 ```bash
-export PATH=$PATH:$HOME/Documents/calepin/bin
+git clone https://github.com/AndiKod/calepin.git  
 ```
-Restart your terminal or enter the `source ~/.bashrc` command. Edit the paths inside bin/comp and bin/deploy to match your calepin folder.
-
-### Grab a recent Pandoc version
+Make sure pandoc , sass, purgeCSS & entr are installed. On something like Ubuntu 22 (full or inside WSL), Debien, & those based upon them you can just go:
 
 ```bash
-wget https://github.com/jgm/pandoc/releases/download/2.9.2.1/pandoc-2.9.2.1-1-amd64.deb
-sudo dpkg -i pandoc-2.9.2.1-1-amd64.deb
+npm i -g css purgeCSS
+sudo apt-get install pandoc
+sudo apt-get install entr 
 ```
 
-When installing from your distro library, it sometimes install old versions. Check that [stackoverflow](https://stackoverflow.com/questions/61100045/how-to-install-stable-and-fresh-pandoc-on-ubuntu) post about that point.
+*If you are rolling something like Gentoo or Arch, I bet you know how to get those packages.*
 
-- Add it's path also as a [sh:erpa](https://github.com/AndiKod/sherpa) route, to fully integrate it and get to all the productivity and quality-of-life tools. 
+- Edit the path to your root folder inside `bin/watch` and `bin/build`. That's all. For next times, clonning the Calepin and edit the path will be enough.
 
-# Basic Usage
+## Basic Usage
 
-## Compile with Pandoc via `comp`
+Available commands from inside the `bin/` folder:
 
-Run `comp` to compile/generate a website inside /dist from the content in /src. From inside Vim, just use `:!comp` and keep editing.
+### `watch`
 
-Via Pandoc, Calepin include:
+Build sass, compile templates & md, copy assets and palce everything in the `dist` folder, so that we could serve it from there. Unused css are removed. Run again when files are changed inside `src/` folder.
+
+### `serve`
+
+Launch `npx http-server` or install it on the first run. Your Calepin from `dist/` is availble at http://localhost:8080  
+
+### `build` 
+
+Compile everyting to `dist/`  like `watch` but with css in compressed mode.
+
+### `deploy`
+
+Run Vercel once from dist/ to establish the link, then just `deploy`the next times.
+
+
+
+## Pandoc sweet tools:
 
 - frontmatter data
 - layouts
@@ -53,47 +63,23 @@ Check the docs about the [Templates](https://pandoc.org/MANUAL.html#templates) a
 
 For now `src/index.md` will compile to `dist/index.html`, and `src/somepage.md` will compile to `dist/somepage/index.html` to have clean urls like https://mysite.com and https://mysite.com/somepage.
 
-## Watch for changes with entr(1) via `watch`
 
-The `bin/watch` script will run `comp` on .md and .html change/save, using [entr](eradman.com/entrproject). The utility is available on package managers, like here for [Debien/Ubuntu](https://installati.one/debian/11/entr) based distros and WSL Ubuntu.
+### Integrate with [sh:erpa](https://github.com/AndiKod/sherpa) to get Git commands, edit md files, todos, search the web...
 
+- `s toGit` :save/push to the remote, with default or custom msg
+- `s fromGit` :pull in the most recent version  
+- `s sync` :either push changes, or pull (just in case) 
+- `s --help` for docs and commands lists, in english or français
 
-## Deploy to Vercel 
-
-- `deploy` to run `vercel --prod` from dist  
-
-*PS: vercel must be runned once prior to that, from the /dist folder to setup the link before just edit `bin/deploy` and fire `deploy` to go live whenever needed.*
-
-Can obviously be adapted to run Netlify or whatever else instead.
-
-### Integrate with sh:erpa to get Git commands, and more
-
-- `s sync` or `s toGit "message txt"` to save/push
-- `s fromGit` to pull the most recent version  
-- `s --help` for docs and commands lists
-
-
-All commands can be used from inside Vim, preceded by `:!`
 
 
 TODO: Looking into custom routes and folder-based content routing
 
 
-## One line ...DevServer
+---
 
 
-On Linux or Windows WSL, go inside & launch the Server:
-
-```bash
-cd ~/Documents/calepin/dist
-npx http-server 
-```
-
-On the first call it will install it. Your Calepin website is running at http://localhost:8080
-
-
-
-### The good old [XAMPP](https://www.apachefriends.org/index.html) or [WAMP](https://www.wampserver.com/en/) 
+#### The good old [XAMPP](https://www.apachefriends.org/index.html) or [WAMP](https://www.wampserver.com/en/) 
 
 As an alternative, If you have something like that still installed, clone the repo in the specific root, or download and drop it there. 
 
@@ -102,9 +88,9 @@ As an alternative, If you have something like that still installed, clone the re
 firefox http://localhost/calepin/dist
 ```
 
-### The Python route  
+#### The Python http server  
 
-For the record, but one of the above should be enough.
+For the record, but one of the other methods should be enough.  
 
 ```bash
 python -m SimpleHTTPSertver 8080
