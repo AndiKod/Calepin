@@ -5,7 +5,7 @@
 #+from the .md and layouts.    #
 # At it core, stands Pandoc.   #
 
-root="/home/andrei/code/calepin"
+root="/home/andrei/Kod/calepin"
 
 tplHome=$root/src/layouts/Home.html
 tplPage=$root/src/layouts/Page.html
