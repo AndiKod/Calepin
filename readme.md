@@ -23,7 +23,7 @@ sudo apt-get install entr
 
 *If you are rolling something like Gentoo or Arch, I bet you know how to get those packages.*
 
-- Edit the path to your root folder inside `bin/compil` and `bin/build`. That's all. For next times, clonning the Calepin and edit the path will be enough.
+- Edit the path to your root folder inside `bin/conf'. That's all. For next times, clonning the Calepin and edit the path will be enough.
 
 ## Basic Usage
 

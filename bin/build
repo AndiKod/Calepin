@@ -5,22 +5,20 @@
 #+from the .md and layouts.    #
 # At it core, stands Pandoc.   #
 
-root="/home/andrei/code/calepin"
+# --- Bring in the Conf vars --- #
 
-tplHome=$root/src/layouts/Home.html
-tplPage=$root/src/layouts/Page.html
-content=$root/src/pages
-data=$root/src/data
-dist=$root/dist  
+full_path=$(realpath $0)
+dir_path=$(dirname $full_path)
 
-
+source "$dir_path/conf" 
 
 # --- Clean --- #
 
-rm -rf $dist/assets  
+rm -rf $dist
+mkdir $dist  
   
 
-# --- Compile --- #
+# --- Pandoc Magic --- #
 
 for file in $content/*
 do
@@ -46,16 +44,17 @@ done
 # --- Compile SASS to Compressed --- #
 
 echo "Compiling SASS for production"
-sass --style=compressed $root/src/assets/css/input.scss $root/src/assets/css/style.min.css 
+sass --style=compressed $root/src/assets/css/input.scss $root/src/assets/css/raw.css 
 
 # --- PurgeCSS --- #
 
 echo "Removing unused styles"
-purgecss --css $root/src/assets/css/style.min.css --content $dist/**/*.html $dist/**/*.js -o $dist/style.css
+purgecss --css $root/src/assets/css/raw.css --content $dist/**/*.html $dist/**/*.js -o $dist/style.css
 
 
 # --- Pass trough --- # 
 echo "Copy Assets"
-cp -r $root/src/assets $root/dist
+cp -r $root/src/assets/js $dist/main.js 
+cp -r $root/src/assets/img $dist/img 
 echo "Done!"
 

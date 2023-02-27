@@ -1,0 +1,10 @@
+
+root="/home/andrei/Kod/calepin"
+
+
+
+tplHome=$root/src/layouts/Home.html
+tplPage=$root/src/layouts/Page.html
+content=$root/src/pages
+data=$root/src/data
+dist=$root/dist  
