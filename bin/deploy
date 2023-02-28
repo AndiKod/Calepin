@@ -5,11 +5,14 @@
 #+from the .md and layouts.    #
 # At it core, stands Pandoc.   #
 
-root="/home/andrei/code/calepin"
-dist=$root/dist  
+# --- Bring in the Conf vars --- #
+
+full_path=$(realpath $0)
+dir_path=$(dirname $full_path)
+source "$dir_path/conf"
 
 # --- Deploy  to Vercel --- #
-cd $root/dist
+cd $dist
 vercel --prod
 
 
